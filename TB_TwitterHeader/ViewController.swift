@@ -9,7 +9,9 @@ import UIKit
 let offset_HeaderStop:CGFloat = 40.0 // At this offset the Header stops its transformations
 let offset_B_LabelHeader:CGFloat = 95.0 // At this offset the Black label reaches the Header
 let distance_W_LabelHeader:CGFloat = 35.0 // The distance between the bottom of the Header and the top of the White Label
-
+protocol VCProfileDelegate {
+    func updateTabViewContainer(_ height : CGFloat)
+}
 class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var scrollView:UIScrollView!
@@ -18,13 +20,24 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var headerLabel:UILabel!
     @IBOutlet var headerImageView:UIImageView!
     @IBOutlet var headerBlurImageView:UIImageView!
+    @IBOutlet var TabViewHeightConstraint : NSLayoutConstraint!
     var blurredHeaderImageView:UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(onTabViewHeightChanged(noti:)), name: NSNotification.Name("UITableUpdateHeight"), object: nil)
     }
-    
+    @objc
+    func onTabViewHeightChanged(noti : Notification ){
+        if let height = noti.userInfo?["newHeight"] as? CGFloat {
+            updateTabViewContainer(height)
+        }
+    }
+    func updateTabViewContainer(_ height: CGFloat) {
+        let minHeight:CGFloat = 64
+        TabViewHeightConstraint.constant = max(minHeight,height+minHeight)
+    }
     override func viewDidAppear(_ animated: Bool) {
         
         // Header - Image
@@ -121,4 +134,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return UIStatusBarStyle.lightContent
     }
+}
+
+extension ViewController : VCProfileDelegate {
+   
 }
