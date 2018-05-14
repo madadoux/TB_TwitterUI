@@ -16,6 +16,14 @@
 		58B1127A1DFA1293000162BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58B112791DFA1293000162BD /* Images.xcassets */; };
 		58B1127C1DFA12C8000162BD /* TWTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B1127B1DFA12C8000162BD /* TWTButton.swift */; };
 		58B1127E1DFA131E000162BD /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B1127D1DFA131E000162BD /* AvatarImageView.swift */; };
+		58D105D720A9CD9700630B0C /* VCCollectionViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D105D620A9CD9700630B0C /* VCCollectionViewTest.swift */; };
+		58D105DC20AA093600630B0C /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D105DA20AA093600630B0C /* PinterestLayout.swift */; };
+		58D105DD20AA093600630B0C /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D105DB20AA093600630B0C /* AnnotatedPhotoCell.swift */; };
+		58D105DF20AA093E00630B0C /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58D105DE20AA093E00630B0C /* Photos.plist */; };
+		58D105E120AA094400630B0C /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D105E020AA094400630B0C /* Photos.xcassets */; };
+		58D105E320AA0FB200630B0C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D105E220AA0FB200630B0C /* Photo.swift */; };
+		58D105E520AA0FE000630B0C /* collectionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D105E420AA0FE000630B0C /* collectionView.storyboard */; };
+		58D105E720AA10FB00630B0C /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D105E620AA10FB00630B0C /* PhotoStreamViewController.swift */; };
 		F4F01D6620A8555600558E40 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F01D6520A8555600558E40 /* CustomTableView.swift */; };
 		F4F01D6920A864EF00558E40 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F01D6820A864EF00558E40 /* TabsView.swift */; };
 		F4F01D6B20A86AB800558E40 /* VCChild1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F01D6A20A86AB800558E40 /* VCChild1.swift */; };
@@ -37,6 +45,14 @@
 		58B112791DFA1293000162BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58B1127B1DFA12C8000162BD /* TWTButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWTButton.swift; sourceTree = "<group>"; };
 		58B1127D1DFA131E000162BD /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		58D105D620A9CD9700630B0C /* VCCollectionViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCollectionViewTest.swift; sourceTree = "<group>"; };
+		58D105DA20AA093600630B0C /* PinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		58D105DB20AA093600630B0C /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		58D105DE20AA093E00630B0C /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		58D105E020AA094400630B0C /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		58D105E220AA0FB200630B0C /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		58D105E420AA0FE000630B0C /* collectionView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = collectionView.storyboard; sourceTree = "<group>"; };
+		58D105E620AA10FB00630B0C /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
 		807E5C491D70ABA8CCD9C07E /* Pods-TB_TwitterHeader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TB_TwitterHeader.release.xcconfig"; path = "Pods/Target Support Files/Pods-TB_TwitterHeader/Pods-TB_TwitterHeader.release.xcconfig"; sourceTree = "<group>"; };
 		F4F01D6520A8555600558E40 /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		F4F01D6820A864EF00558E40 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -85,11 +101,13 @@
 		58B112611DFA11DB000162BD /* TB_TwitterHeader */ = {
 			isa = PBXGroup;
 			children = (
+				58D105D520A9CD5500630B0C /* CollectionViewTest */,
 				F4F01D6720A864CF00558E40 /* TabsViewTest */,
 				58B112741DFA121E000162BD /* Helpers */,
 				58B112621DFA11DB000162BD /* AppDelegate.swift */,
 				58B112641DFA11DB000162BD /* ViewController.swift */,
 				58B112661DFA11DB000162BD /* Main.storyboard */,
+				58D105E420AA0FE000630B0C /* collectionView.storyboard */,
 				58B112791DFA1293000162BD /* Images.xcassets */,
 				58B1126B1DFA11DB000162BD /* LaunchScreen.storyboard */,
 				58B1126E1DFA11DB000162BD /* Info.plist */,
@@ -108,6 +126,20 @@
 				58B112751DFA1232000162BD /* TB_TwitterHeader-Bridging-Header.h */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		58D105D520A9CD5500630B0C /* CollectionViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				58D105E620AA10FB00630B0C /* PhotoStreamViewController.swift */,
+				58D105E020AA094400630B0C /* Photos.xcassets */,
+				58D105DE20AA093E00630B0C /* Photos.plist */,
+				58D105E220AA0FB200630B0C /* Photo.swift */,
+				58D105DB20AA093600630B0C /* AnnotatedPhotoCell.swift */,
+				58D105DA20AA093600630B0C /* PinterestLayout.swift */,
+				58D105D620A9CD9700630B0C /* VCCollectionViewTest.swift */,
+			);
+			name = CollectionViewTest;
 			sourceTree = "<group>";
 		};
 		83E689EBD94DFCE773025093 /* Pods */ = {
@@ -196,6 +228,9 @@
 				58B1126D1DFA11DB000162BD /* LaunchScreen.storyboard in Resources */,
 				58B1127A1DFA1293000162BD /* Images.xcassets in Resources */,
 				58B112681DFA11DB000162BD /* Main.storyboard in Resources */,
+				58D105E520AA0FE000630B0C /* collectionView.storyboard in Resources */,
+				58D105E120AA094400630B0C /* Photos.xcassets in Resources */,
+				58D105DF20AA093E00630B0C /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +300,12 @@
 				58B1127E1DFA131E000162BD /* AvatarImageView.swift in Sources */,
 				F4F01D6620A8555600558E40 /* CustomTableView.swift in Sources */,
 				583C54FF1DFA15F80087D73C /* FXBlurView.m in Sources */,
+				58D105E720AA10FB00630B0C /* PhotoStreamViewController.swift in Sources */,
+				58D105D720A9CD9700630B0C /* VCCollectionViewTest.swift in Sources */,
+				58D105E320AA0FB200630B0C /* Photo.swift in Sources */,
 				58B1127C1DFA12C8000162BD /* TWTButton.swift in Sources */,
+				58D105DD20AA093600630B0C /* AnnotatedPhotoCell.swift in Sources */,
+				58D105DC20AA093600630B0C /* PinterestLayout.swift in Sources */,
 				F4F01D6D20A86AD400558E40 /* VCChild2.swift in Sources */,
 				58B112631DFA11DB000162BD /* AppDelegate.swift in Sources */,
 				F4F01D6B20A86AB800558E40 /* VCChild1.swift in Sources */,

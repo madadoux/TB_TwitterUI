@@ -8,6 +8,7 @@
 
 import Foundation
 class CustomTableView  : UITableView {
+    @IBInspectable var numberOfCells:Int = 50
     override func awakeFromNib() {
         delegate = self
         dataSource = self
@@ -18,7 +19,7 @@ class CustomTableView  : UITableView {
 
 extension CustomTableView : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
