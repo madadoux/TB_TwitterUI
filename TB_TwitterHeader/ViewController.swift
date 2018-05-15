@@ -124,10 +124,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func shamelessActionThatBringsYouToMyTwitterProfile() {
-        if UIApplication.shared.canOpenURL(URL(string:"twitter://user?screen_name=bitwaker")!){
-            UIApplication.shared.open(URL(string:"twitter://user?screen_name=bitwaker")!)
+        if UIApplication.shared.canOpenURL(URL(string:"twitter://user?screen_name=MadaSaeed")!){
+            UIApplication.shared.open(URL(string:"twitter://user?screen_name=MadaSaeed")!)
         }else{
-            UIApplication.shared.open(URL(string:"https://twitter.com/bitwaker")!)
+            UIApplication.shared.open(URL(string:"https://twitter.com/MadaSaeed")!)
         }
     }
     

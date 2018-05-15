@@ -60,7 +60,6 @@ class PhotoStreamViewController: UICollectionViewController , IndicatorInfoProvi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
-         NotificationCenter.default.post(name: Notification.Name( "UITableUpdateHeight"), object: nil, userInfo: ["newHeight" : collectionView?.collectionViewLayout.collectionViewContentSize.height])
     }
   
 }
@@ -80,6 +79,7 @@ extension PhotoStreamViewController: UICollectionViewDelegateFlowLayout {
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnnotatedPhotoCell", for: indexPath as IndexPath) as! AnnotatedPhotoCell
     cell.photo = photos[indexPath.item]
+    NotificationCenter.default.post(name: Notification.Name( "UITableUpdateHeight"), object: nil, userInfo: ["newHeight" : collectionView.collectionViewLayout.collectionViewContentSize.height])
     return cell
   }
   
@@ -87,5 +87,4 @@ extension PhotoStreamViewController: UICollectionViewDelegateFlowLayout {
     let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
     return CGSize(width: itemSize , height: itemSize)
   }
-  
 }
